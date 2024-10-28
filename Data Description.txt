@@ -1,0 +1,33 @@
+Status Code
+0	Currently Airing	
+1	Finished Airing
+2	Not yet aired
+
+
+Source Code
+0	4-koma manga
+1	Book
+2	Card game
+3	Game
+4	Light novel
+5	Manga
+6	Mixed media
+7	Music
+8	Novel
+9	Original
+10	Other
+11	Picture book
+12	Radio
+13	Unknown
+14	Visual Novel
+15	Web manga
+16	Web novel
+
+Rating Code
+0	G - All Ages
+1	PG - Children
+2	PG-13 - Teens 13 or older
+3	R - 17+ (violence & profanity)
+4	R+ - Mild Nudity
+5	Rx - Hentai
+6	Unknown (Removed)
