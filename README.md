@@ -67,13 +67,14 @@ The cleaned dataset includes:
 
 ### Visualizations
 - Boxplots & scatterplots for score distributions
+- Trend lines for predictions across Episodes & Duration
+- Seasonal & Monthly Average Score Visualizations
+- Decision Tree & Feature Importance Plots
 
 ### Contributors
 - Jordan Choi - Data Cleaning & EDA
 - Yu Kai - Machine Learning & Analysis
 - Kye Yong - Visualizations & Reporting
-- Trend lines for predictions across Episodes & Duration
-- Seasonal & Monthly Average Score Visualizations
-- Decision Tree & Feature Importance Plots
+
    
  
