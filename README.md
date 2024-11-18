@@ -15,33 +15,16 @@ This project involves an in-depth analysis of an anime dataset to uncover insigh
   - Producers, Studio
   - Score, Rank, Popularity
   - Start Date, End Date
- <q>
- anime_id         int64
-Name            object
-English name    object
-Other name      object
-Score           object
-Genres          object
-Synopsis        object
-Type            object
-Episodes        object
-Aired           object
-Premiered       object
-Status          object
-Producers       object
-Licensors       object
-Studios         object
-Source          object
-Duration        object
-Rating          object
-Rank            object
-Popularity       int64
-Favorites        int64
-Scored By       object
-Members          int64
-Image URL       object
-dtype: object
-</q>
+ 
+### Data Types Before Cleaning:
+![Original DTypes](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/dtypes%20Original.png)
+
+### Data Types After Cleaning:
+![Original DTypes](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/anime_cleaned_df.dtypes%20after%20cleaning.png)
+
+### Statistical Summary of anime_cleaned_df
+![Statistical Summary of anime_cleaned_df](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/anime_cleaned_df.describe().png)
+![Statistical Summary of anime_cleaned_df 2](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/anime_cleaned_df.describe()%202%20.png)
 
 ## Objective
 - Analyze the relationship between anime features & their scores
