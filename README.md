@@ -26,6 +26,12 @@ This project involves an in-depth analysis of an anime dataset to uncover insigh
 ![Statistical Summary of anime_cleaned_df](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/anime_cleaned_df.describe().png)
 ![Statistical Summary of anime_cleaned_df 2](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/anime_cleaned_df.describe()%202%20.png)
 
+Numerical variables are converted to int64 or float.
+
+#### Separated Dataframes
+![Data Dims of Separated Dataframes](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Data%20Dims%20of%20Dataframes.png)
+![Info of Combined Dataframes](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Info%20of%20merged_df%20(all%20cols).png)
+
 ## Objective
 - Analyze the relationship between anime features & their scores
 - Predict anime scores using machine learning models
@@ -267,9 +273,9 @@ The cleaned dataset includes:
   - Identified trends in monthly and yearly average. Monthly averages peak in April, July, and October, having a sharp drop in May, August, and November respectively
 
 <p align="left">
-  <img src=https://github.com/user-attachments/assets/0b149d78-1ee9-4534-856b-213af5061687 alt="Image 1" width="300"><br>
-  <img src=https://github.com/user-attachments/assets/51d770ad-f9ba-4ba2-86b5-61a37908fe9f alt="Image 2" width="300"><br>
-  <img src= https://github.com/user-attachments/assets/57890c0b-17a2-4148-9ba9-a465b84117a6 width="300"><br>
+  <img style="display: inline" src=https://github.com/user-attachments/assets/0b149d78-1ee9-4534-856b-213af5061687 alt="Image 1" width="300"><br>
+  <img style="display: inline" src=https://github.com/user-attachments/assets/51d770ad-f9ba-4ba2-86b5-61a37908fe9f alt="Image 2" width="300"><br>
+  <img style="display: inline" src= https://github.com/user-attachments/assets/57890c0b-17a2-4148-9ba9-a465b84117a6 width="300"><br>
 </p>
 
 - **Category-Based Analysis**
