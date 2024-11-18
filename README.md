@@ -15,6 +15,33 @@ This project involves an in-depth analysis of an anime dataset to uncover insigh
   - Producers, Studio
   - Score, Rank, Popularity
   - Start Date, End Date
+ <q>
+ anime_id         int64
+Name            object
+English name    object
+Other name      object
+Score           object
+Genres          object
+Synopsis        object
+Type            object
+Episodes        object
+Aired           object
+Premiered       object
+Status          object
+Producers       object
+Licensors       object
+Studios         object
+Source          object
+Duration        object
+Rating          object
+Rank            object
+Popularity       int64
+Favorites        int64
+Scored By       object
+Members          int64
+Image URL       object
+dtype: object
+</q>
 
 ## Objective
 - Analyze the relationship between anime features & their scores
@@ -226,6 +253,7 @@ This project involves an in-depth analysis of an anime dataset to uncover insigh
     </tr>
 </table>
 <hr>
+
 ### Challenges Addressed
 1. **Irrelevant Data**
     - Dropped Other Name, Licensors due to irrelevance or excessive unknown values
