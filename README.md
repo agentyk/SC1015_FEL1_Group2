@@ -346,7 +346,7 @@ Genre Significance
       <td>Score</td>
       <td>Significant</td>
       <td>0.00e+00</td>
-      <td>1.118/unit</td>
+      <td>1.118/unit **Note that We use correlation from spearman rank test and calculate change in score for the correalation value, if just do linear regression score definitely changes 1/unit change in score</td>
     </tr>
     <tr>
       <td>Slice of Life</td>
