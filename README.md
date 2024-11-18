@@ -307,7 +307,7 @@ Insights:
   - Categorized anime by episode count and analyzed score distributions. Medium (13-24 eps) length anime has the highest median score, followed by short (1-12 episodes), extremely long (100+ eps), and very long (51-100 eps) anime. 
 <img src=https://github.com/user-attachments/assets/762739a9-a4b0-44c0-b17c-1d6ff438fa72 width="500">
 
-  - Explored genre-specific scoring patterns. The average Score per genre of Award Winning Anime is highest, followed closely by Girls Love. However, when a t test in conducted on the 
+  - Explored genre-specific scoring patterns. The average Score per genre of Award Winning Anime is highest, followed closely by Girls Love.
 <img src=https://github.com/user-attachments/assets/a9ef2899-6664-4a84-b74e-0e1ee6d84498 width="500">
 
 - **Correlations**
@@ -343,7 +343,7 @@ Insights:
   </tbody>
 </table>
 
-##### non-Multivalues
+**non-Multivalues**
 
 The following is the significance of all the non-multivalues. Of note is that having an english name raises the average score by 0.89, being a TV anime raises your average score, and newer anime tending to perform better than old anime. 
 
@@ -675,7 +675,7 @@ Of particular significance is that Girl's Love is the most popular genre, while 
 - Yearly & Monthly Average Score Visualizations. Anime scores fluctuate by as much as 2.5 points from year to year!
 ![image](https://github.com/user-attachments/assets/d50d5682-cc4c-4d9a-b102-83a19fe6a023)
 
-- Decision Tree & Feature Importance Plots. Duration of anime may be twice as important as anime genre, according to this
+- Decision Tree & Feature Importance Plots. Duration of anime may be twice as important as anime genre
 ![image](https://github.com/user-attachments/assets/176fc2ff-51c8-4b07-94cd-7f72fc3c8bb4)
 ![image](https://github.com/user-attachments/assets/2846e78c-5e64-4ffa-8947-0997cb5fd6fc)
 
