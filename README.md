@@ -386,22 +386,32 @@ Genre Significance
 
 2. Decision Tree Classifier
    - Classified anime scores and allow user to input anime parameters to get back predicted anime score
-![image](https://github.com/user-attachments/assets/adc701d8-eaab-4515-82f7-09ce30492c99)
+![image](https://github.com/user-attachments/assets/176fc2ff-51c8-4b07-94cd-7f72fc3c8bb4)
 
 3. XGBoost Regressor
    - Leveraged categorical features for robust predictions
    - Used numeric and categorical values to determine if feature has significant impact on the score
+
 ![image](https://github.com/user-attachments/assets/2846e78c-5e64-4ffa-8947-0997cb5fd6fc)
 
 4. CatBoost Classifier
    - Utilized GPU accelerations for genre-based score predictions.
    - Evaluated with Classification Accuracy, Classification Report,
    - Mean Squared Error (MSE), Mean Absolute Error (MAE) and R-squared
-![image](https://github.com/user-attachments/assets/216793ba-ba82-4b67-9709-2ac5adb0c9fb)
+<p align="center">
+  <nl>
+  <img src=https://github.com/user-attachments/assets/216793ba-ba82-4b67-9709-2ac5adb0c9fb height="300">
+  </nl>
+</p>
+
 
 ### Visualizations
 - Boxplots & scatterplots for score distributions
-![image](https://github.com/user-attachments/assets/66f22efe-1965-47b7-88b3-d01af11b01e7)
+<p align="center">
+  <nl>
+  <img src=https://github.com/user-attachments/assets/66f22efe-1965-47b7-88b3-d01af11b01e7 height="300">
+  </nl>
+</p>
 
 - Trend lines for predictions across Episodes & Duration
 ![image](https://github.com/user-attachments/assets/da9ebc4b-fdd0-4260-9d24-69503f57e820)
