@@ -1,12 +1,14 @@
-## SC1015_FEL1_Group2
-# Anime Dataset Analysis Project - Finding out what drives a successful anime
+# SC1015_FEL1_Group2
+## Anime Dataset Analysis Project - 
+### Finding out what drives a successful anime
 
 ## Overview
 This project involves an in-depth analysis of an anime dataset to uncover insights, explore trends and predict anime scores using machine learning models. This dataset contains over 25,000 anime titles with features such as Genres, Episodes, Duration, Score and more. The objective is to understand the factors that influence anime rating and predict scores based on various attributes.
 
 ## Dataset Information
 - Source: [Anime Dataset 2023](https://www.kaggle.com/datasets/dbdmobile/myanimelist-dataset/data)
-- Size: 25,000+ anime titles
+- Size: 24,905 anime titles
+- 24 columns x 24905 rows in Original Dataset
 - **Key Features:**
   - Name, Type (TV, OVA, ONA, etc.)
   - Episodes, Durations Genres
@@ -22,18 +24,18 @@ This project involves an in-depth analysis of an anime dataset to uncover insigh
 ## Data Cleaning
 ### Challenges Addressed
 1. **Irrelevant Data**
-  - Dropped Other Name, Licensors due to irrelevance or excessive unknown values
-  - Removed anime types (Movie, Music, Special) not relevant to the analysis
+    - Dropped Other Name, Licensors due to irrelevance or excessive unknown values
+    - Removed anime types (Movie, Music, Special) not relevant to the analysis
 2. Missing and Unknown Values
-  - Replaced Unknown Values in Score, Scored By, Episodes and Duration using techniques:
-  - Mode & Median Imputation
-  - Multivariate Imputation by Chained Equations (MICE)
+    - Replaced Unknown Values in Score, Scored By, Episodes and Duration using techniques:
+    - Mode & Median Imputation
+    - Multivariate Imputation by Chained Equations (MICE)
 3. Feature Engineering:
-  - Encoded Genres, Producers, and Studios using Multi-Label Binarization
-  - Converted Rating, Status and Source to numerical codes via Label Encoding
-  - Transformed Duration to total minutes and split Aired into Start and End Date
+    - Encoded Genres, Producers, and Studios using Multi-Label Binarization
+    - Converted Rating, Status and Source to numerical codes via Label Encoding
+    - Transformed Duration to total minutes and split Aired into Start and End Date
 4. Outliers
-   -- Removed outliers in Duration and Episodes for better model performance.
+    - Removed outliers in Duration and Episodes for better model performance.
 
 ### Final Dataset
 The cleaned dataset includes:
