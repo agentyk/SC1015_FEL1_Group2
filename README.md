@@ -14,12 +14,18 @@ This project involves an in-depth analysis of an anime dataset to uncover insigh
   - Producers, Studio
   - Score, Rank, Popularity
   - Start Date, End Date
- 
-### Data Types Before Cleaning:
-![Original DTypes](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/dtypes%20Original.png)
-
-### Data Types After Cleaning:
-![Original DTypes](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/anime_cleaned_df.dtypes%20after%20cleaning.png)
+<p align=center>
+  <table style="width: 100%; text-align: center">
+      <tr>
+          <th>Data Types Before Cleaning</th>
+          <th>Data Types After Cleaning</th>
+      </tr>
+      <tr>
+          <th> <img src=https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/dtypes%20Original.png width="300"> </th>
+          <th><img src=https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/anime_cleaned_df.dtypes%20after%20cleaning.png width="450"></th>
+      </tr>
+  </table>
+</p>
 
 ### Statistical Summary of anime_cleaned_df
 ![Statistical Summary of anime_cleaned_df](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/anime_cleaned_df.describe().png)
@@ -266,41 +272,41 @@ The cleaned dataset includes:
 
 ## Exploratory Data Analysis (EDA)
 
-### Key Insights
+## Key Insights
 - **Seasonal Trends**
   - Identified scoring trends across seasons (Winter, Spring, Summer, Fall).
     - Anime which debuted in Winter and Summer often have higher scores  
   - Identified trends in monthly and yearly average. Monthly averages peak in April, July, and October, having a sharp drop in May, August, and November respectively
  
-#### Genres
+### Genres
 ![Genre Breakdown by Count](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Most%20Common%20Genres.png)
 ![Average Score by Genre](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Average%20Scores%20of%20Each%20Genres.png)
 ![Genres Score Heatmap](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Genres%20x%20Score%20heatmap.png)
 
-Insights:
+#### Insights:
 - Majority of the anime (~5000) are comedies, followed by Fantasy, Action and Adventure.
 - Genres - "Award Winning" , "Girls Love", "Erotica", "Sci-Fi" and "Romance" tends to fetch higher scores in order, but the first three genres has the least anime produced. This means that most of the animes of these genres are consistent, and was not skewed by worse anime of the genres. "Sci-Fi" and "Romance" are within the Top 10 Genres with the most anime titles.
 - Hence, "Sci-Fi" and "Romance" are good genres for producers, and studios to produce if they are seeking for a genre with higher likelihood to be successful.
 
-#### Producers
+### Producers
 ![Top 50 Producers by Number of Anime Titles Produced](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Top%2050%20Producers%20with%20Most%20Produced%20Titles.png)
 ![Heatmap for Average Scores of Producers in Descending Order - 1](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Best%20Performing%20Producers%20Heatmap%201.png)
 ![Heatmap for Average Scores of Producers in Descending Order - 2](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Best%20Performing%20Producers%20Heatmap%202.png)
 ![Heatmap for Average Scores of Producers in Descending Order - 3](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Best%20Performing%20Producers%20Heatmap%2024.png)
 ![Popularity, Score & Producers Relationship Visualized](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Producers%20x%20Score%20x%20Popularity%20Relationship.png)
 
-#### Studios
-![Top 50 Studios by Number of Anime Titles Produced](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Top%2050%20Studios%20with%20Most%20Works.png)
-![Heatmap for Average Scores of Studios in Descending Order - 1](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Best%20Performing%20Studios%20Heatmap%201.png)
-![Heatmap for Average Scores of Studios in Descending Order - 2](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Best%20Performing%20Studios%20Heatmap%202.png)
-![Heatmap for Average Scores of Studios in Descending Order - 3](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Best%20Performing%20Studios%20Heatmap%2012.png)
-![Popularity, Score & Studios Relationship Visualized](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Studios%20x%20Score%20x%20Popularity%20Relationship.png)
+### Studios
 
-
-<p align="left">
-  <img style="display: inline" src=https://github.com/user-attachments/assets/0b149d78-1ee9-4534-856b-213af5061687 alt="Image 1" width="300"><br>
-  <img style="display: inline" src=https://github.com/user-attachments/assets/51d770ad-f9ba-4ba2-86b5-61a37908fe9f alt="Image 2" width="300"><br>
-  <img style="display: inline" src= https://github.com/user-attachments/assets/57890c0b-17a2-4148-9ba9-a465b84117a6 width="300"><br>
+<p align="center">
+  <br>
+  <img style="display: inline" src=https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Top%2050%20Studios%20with%20Most%20Works.png  width="1000"><br>
+  <img style="display: inline" src=https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Best%20Performing%20Studios%20Heatmap%201.png  width="300">
+  <img style="display: inline" src=https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Best%20Performing%20Studios%20Heatmap%202.png  width="300">
+  <img style="display: inline" src=https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Best%20Performing%20Studios%20Heatmap%2012.png  width="300">
+  <img style="display: inline" src=https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Studios%20x%20Score%20x%20Popularity%20Relationship.png  width="1000"><br>
+  <img style="display: inline" src=https://github.com/user-attachments/assets/0b149d78-1ee9-4534-856b-213af5061687 width="1000"><br>
+  <img style="display: inline" src=https://github.com/user-attachments/assets/51d770ad-f9ba-4ba2-86b5-61a37908fe9f width="800"><br>
+  <img style="display: inline" src= https://github.com/user-attachments/assets/57890c0b-17a2-4148-9ba9-a465b84117a6 width="1000"><br>
 </p>
 
 - **Category-Based Analysis**
@@ -345,7 +351,7 @@ Insights:
 
 **non-Multivalues**
 
-The following is the significance of all the non-multivalues. Of note is that having an english name raises the average score by 0.89, being a TV anime raises your average score, and newer anime tending to perform better than old anime. 
+The following is the significance of all the non-multivalues. Having an English name raises the average score by 0.89, being a TV anime raises your average score, and newer anime tending to perform better than old anime. 
 
 
 
@@ -659,18 +665,23 @@ Of particular significance is that Girl's Love is the most popular genre, while 
 ## Visualizations
 - Boxplots & scatterplots for score distributions. For example, here TV has higher score than OVA, which has higher score on average than ONAs
 <p align="center">
-  <nl>
+  <br>
   <img src=https://github.com/user-attachments/assets/66f22efe-1965-47b7-88b3-d01af11b01e7 height="300">
-  </nl>
 </p>
 
 - Trend lines for predictions across Episodes & Duration. It appears Medium Length anime (from 13-24 episodes) perform best
-![image](https://github.com/user-attachments/assets/da9ebc4b-fdd0-4260-9d24-69503f57e820)
-![image](https://github.com/user-attachments/assets/78c30799-0c83-47d5-8d9b-d5715169edc3)
-![image](https://github.com/user-attachments/assets/9d149400-14b9-4ac7-b608-4d98d06f3721)
-![image](https://github.com/user-attachments/assets/75db698c-e656-4a0d-ad5d-9276fe8aad84)
-![image](https://github.com/user-attachments/assets/9993727a-01df-40b7-a2e3-31d7594631a6)
-![image](https://github.com/user-attachments/assets/66d465ed-5c6f-4f58-a7d0-f29a6188f146)
+<p align="center">
+  <br>
+  <img src=https://github.com/user-attachments/assets/da9ebc4b-fdd0-4260-9d24-69503f57e820 width="1000">
+  <br>
+  <img src=https://github.com/user-attachments/assets/78c30799-0c83-47d5-8d9b-d5715169edc3 width="1000">
+  <br>
+  <img src=https://github.com/user-attachments/assets/9d149400-14b9-4ac7-b608-4d98d06f3721 height="340">
+  <img src=https://github.com/user-attachments/assets/75db698c-e656-4a0d-ad5d-9276fe8aad84 height="340">
+  <br>
+  <img src=https://github.com/user-attachments/assets/9993727a-01df-40b7-a2e3-31d7594631a6 height="340">
+  <img src=https://github.com/user-attachments/assets/66d465ed-5c6f-4f58-a7d0-f29a6188f146 height="340">
+</p>
 
 - Yearly & Monthly Average Score Visualizations. Anime scores fluctuate by as much as 2.5 points from year to year!
 ![image](https://github.com/user-attachments/assets/d50d5682-cc4c-4d9a-b102-83a19fe6a023)
