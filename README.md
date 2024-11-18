@@ -273,17 +273,15 @@ The cleaned dataset includes:
     - Anime which debuted in Winter and Summer often have higher scores  
   - Identified trends in monthly and yearly average. Monthly averages peak in April, July, and October, having a sharp drop in May, August, and November respectively
  
-#### Score - Our Main Focus
-
- 
 #### Genres
 ![Genre Breakdown by Count](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Most%20Common%20Genres.png)
 ![Average Score by Genre](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Average%20Scores%20of%20Each%20Genres.png)
 ![Genres Score Heatmap](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Genres%20x%20Score%20heatmap.png)
 
 Insights:
-Majority of the anime (~5000) are comedies, followed by Fantasy, Action and Adventure.
-Genres - "Award Winning" , "Girls Love", "Erotica", "Sci-Fi" and "Romance" tends to fetch higher scores in order, but the first three genres has the least anime produced. This means that most of the animes of these genres are consistent, and was not skewed by worse anime of the genres. "Sci-Fi" and "Romance" are within the Top 10 Genres with the most anime titles. Hence, "Sci-Fi" and "Romance" are good genres for producers, and studios to produce if they are seeking for a genre with higher likelihood to be successful.
+- Majority of the anime (~5000) are comedies, followed by Fantasy, Action and Adventure.
+- Genres - "Award Winning" , "Girls Love", "Erotica", "Sci-Fi" and "Romance" tends to fetch higher scores in order, but the first three genres has the least anime produced. This means that most of the animes of these genres are consistent, and was not skewed by worse anime of the genres. "Sci-Fi" and "Romance" are within the Top 10 Genres with the most anime titles.
+- Hence, "Sci-Fi" and "Romance" are good genres for producers, and studios to produce if they are seeking for a genre with higher likelihood to be successful.
 
 #### Producers
 ![Top 50 Producers by Number of Anime Titles Produced](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Top%2050%20Producers%20with%20Most%20Produced%20Titles.png)
@@ -294,7 +292,10 @@ Genres - "Award Winning" , "Girls Love", "Erotica", "Sci-Fi" and "Romance" tends
 
 #### Studios
 ![Top 50 Studios by Number of Anime Titles Produced](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Top%2050%20Studios%20with%20Most%20Works.png)
-
+![Heatmap for Average Scores of Studios in Descending Order - 1](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Best%20Performing%20Studios%20Heatmap%201.png)
+![Heatmap for Average Scores of Studios in Descending Order - 2](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Best%20Performing%20Studios%20Heatmap%202.png)
+![Heatmap for Average Scores of Studios in Descending Order - 3](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Best%20Performing%20Studios%20Heatmap%2012.png)
+![Popularity, Score & Studios Relationship Visualized](https://github.com/agentyk/SC1015_FEL1_Group2/blob/main/Readme%20Images/Studios%20x%20Score%20x%20Popularity%20Relationship.png)
 
 
 <p align="left">
