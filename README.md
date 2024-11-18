@@ -3,8 +3,7 @@
 ### Finding out what drives a successful anime
 
 ## Overview
-This project involves an in-depth analysis of an anime dataset to uncover insights, explore trends and predict anime scores using machine learning models. This dataset contains over 25,000 anime titles with features such as Genres, Episodes, Duration, Score and more. The objective is to understand the factors that influence anime rating and predict scores based on various attributes.
-
+This project involves an in-depth analysis of an anime dataset to uncover insights, explore trends and predict anime scores using machine learning models. This dataset contains roughly 25,000 anime titles with features such as Genres, Episodes, Duration, Score and more. We aim to understand the factors influencing anime scores and popularity using machine learning and exploratory analysis, and to find out patterns or trends in high-scoring animes that can help creators, studios develop anime that are more likely to be successful, and help fans make better selection when choosing an anime to watch.
 ## Dataset Information
 - Source: [Anime Dataset 2023](https://www.kaggle.com/datasets/dbdmobile/myanimelist-dataset/data)
 - Size: 24,905 anime titles
