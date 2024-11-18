@@ -22,6 +22,210 @@ This project involves an in-depth analysis of an anime dataset to uncover insigh
 - Explore trends such as seasonal releases, episode count impact, and genre-based insights
 
 ## Data Cleaning
+<table style="width: 100%; text-align: left">
+    <tr>
+        <th>Field Name</th>
+        <th>Field Description</th>
+        <th>Clean Up Approach</th>
+        <th>Status</th>
+        <th>Remarks</th>
+    </tr>
+    <tr>
+        <td>anime_id</td>
+        <td>Unique ID for each anime.</td>
+        <td>Same as Raw</td>
+        <td>✔</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>The name of the anime in its original language.</td>
+        <td>Same as Raw.</td>
+        <td>✔</td>
+        <td>Use as Primary Name out of 3 Different Name Data Columns. This data column contains unique values for all rows</td>
+    </tr>
+    <tr>
+        <td>English Name</td>
+        <td>The English name of the anime.</td>
+        <td>Rows with duplicated values with "Name" -> 1<br>"UNKNOWN" -> None<br>Unique Values -> Kept as it is</td>
+        <td>✔</td>
+        <td>Can be used to find out whether the existence of an English Name affects the Score and other values</td>
+    </tr>
+    <tr>
+        <td>Other Name</td>
+        <td>Other names or titles of the anime in different languages.</td>
+        <td>Excluded from Cleaned Data Frame.</td>
+        <td>✔</td>
+        <td>Majority of values are in Japanese Hiragana. We lack the proficiency to process these data, and is unmeaningful.</td>
+    </tr>
+    <tr>
+        <td>Score</td>
+        <td>The score or rating given to the anime.</td>
+        <td>9213 UNKNOWN values, out of 15206 remain after cleaning up from other columns. Applied Multivariate Imputation by Chained Equations (MICE) to fill these missing data.</td>
+        <td>✔</td>
+        <td>One of the main objective of our project. Find out what can achieve a high score.</td>
+    </tr>
+    <tr>
+        <td>Genres</td>
+        <td>The genres of the anime, separated by commas.</td>
+        <td>Separated from the main, cleansed data frame, can be joined back. Applied Multi-Label Binarization to indicate the Genres of the title - since a title can belong to than 1 Genres.<br><br> "1" - True<br>"0" - False</td> 
+        <td>✔</td>
+        <td>genres_df | 4929 "UNKNOWN" Genres - will be 0s for all genres. Can be used to find out which genres are the most successful titles.</td>
+    </tr>
+    <tr>
+        <td>Synopsis</td>
+        <td>A brief description or summary of the anime's plot.</td>
+        <td>4535 rows, out of 15206 titles after cleaning up has no description, indicated by "No description available for this anime." -> Transformed to "NA" value</td>
+        <td>✔</td>
+        <td>Useful to check if existence of a synopsis - using language models, affects the probability of success for an anime title.</td>
+    </tr>
+    <tr>
+        <td>Type</td>
+        <td>The type of the anime (e.g., TV series, movie, OVA, etc.).</td>
+        <td>9699 titles(rows) of type "Music (2686)", "Movie", "UNKNOWN (74)" and "Special" are dropped from the data frame, as it is not our project focus. 15206 titles(rows) remains - TV, OVA and ONA.</td>
+        <td>✔</td>
+        <td>The method of release (TV Air, Original Video Animation (Home Video Format) or Original Net Animation (Direct Online)</td>
+    </tr>
+    <tr>
+        <td>Episodes</td>
+        <td>The number of episodes in the anime.</td>
+        <td>Replace UNKNOWN Episodes (611) value with (Global/Overall Average No. Episodes per Week * No. of Running Weeks). Have to obtain the average number of released episodes/week, from other titles first. Duration may not be available, for such cases: will try to apply KNN.</td>
+        <td>✔</td>
+        <td>Can consider to categorize them into ranges, since the exact number of episodes may not be meaningful</td>
+    </tr>
+    <tr>
+        <td>Aired</td>
+        <td>The dates when the anime was aired.</td>
+        <td>Raw string "MMM DD YYYY to MMM DD YYYY" are split into Start Date and End Date, in DateTime format.<br> 915 Titles with "Not Available" Aired Value are replaced with "NaT".<br>Some End Dates are "?", will also be replaced with "NaT" - likely indicates that anime are still airing or end date are not recorded.</td>
+        <td>✔</td>
+        <td>Can consider to categorize them into ranges, since the exact number of episodes may not be meaningful</td>
+    </tr>
+    <tr>
+        <td>Premiered</td>
+        <td>The season and year when the anime premiered.</td>
+        <td>9700/15206 Titles are "UNKNOWN". Will input these UNKNOWN values, using the START DATE when available to compute the season and year.</td>
+        <td>✔</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td>The status of the anime (e.g., Finished Airing, Currently Airing, etc.)</td>
+        <td>Text Categorical Value are transformed to Numerical Categorical Value to represent each status.<br><br>0 - Currently Airing<br>1 - Finished Airing<br>2 - Not yet aired</td>
+        <td>✔</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Producers</td>
+        <td>The production companies or producers of the anime.</td>
+        <td>Separated from the main, cleansed data frame, can be joined back. Applied Multi-Label Binarization to indicate the Producers of the title - since a title can be produced by a collaboration of producers<br><br> "1" - Produced by the Company<br>"0" - Not Produced By the Company</td>
+        <td>✔</td>
+        <td>producers_df | 7306/15206 titles with UNKNOWN value are retained.</td>
+    </tr>
+    <tr>
+        <td>Licensors</td>
+        <td>The licensors of the anime (e.g., streaming platforms).</td>
+        <td>Excluded from Cleaned Data Frame.<br>11666/15206 titles are "UNKNOWN", it is unlikely this column can provide any valuable insights on our problem. This column will be expelled from the data since majority of the values are UNKNOWN.</td>
+        <td>✔</td>
+        <td></td>
+    </tr>
+    </tr>
+    <tr>
+        <td>Studios</td>
+        <td>The animation studios that worked on the anime.</td>
+        <td>Separated from the main, cleansed data frame, can be joined back. Applied Multi-Label Binarization to indicate the Studios of the title - since a title can be produced by a collaboration of Studios<br><br> "1" - Drawn by the Company<br>"0" - Not Drawn By the Company</td>
+        <td>✔</td>
+        <td>studios_df | 5470/15206 titles with UNKNOWN value are retained. Since the studios who produced the anime titles could be an important factor to determine the success of an anime title, this column will be retained. Titles can be a collaboration of more than 1 studios, hence, we will follow a similar approach to Genres. Multi-label binarization will be employed. A unique column label will be created for each studio. Binary values (0 or 1) will be used to indicate if the title belongs to the respective studio.</td>
+    </tr>
+    <tr>
+        <td>Source</td>
+        <td>The source material of the anime (e.g., manga, light novel, original).</td>
+        <td>Converted the Categorical Data Field - "Source" from Text Representation to Numerical Representation, Represented under "Source Code"<br><br>
+            0	4-koma manga<br>
+            1	Book<br>
+            2	Card game<br>
+            3	Game<br>
+            4	Light novel<br>
+            5	Manga<br>
+            6	Mixed media<br>
+            7	Music<br>
+            8	Novel<br>
+            9	Original<br>
+            10	Other<br>
+            11	Picture book<br>
+            12	Radio<br>
+            13	Unknown<br>
+            14	Visual Novel<br>
+            15	Web manga<br>
+            16	Web novel<br>
+        </td>
+        <td>✔</td>
+        <td>2117/15206 titles with UNKNOWN source values. </td>
+    </tr>
+    <tr>
+        <td>Duration</td>
+        <td>The duration of each episode.</td>
+        <td>Converted all duration runtime of the titles to minutes</td>
+        <td>✔</td>
+        <td>416 titles with "UNKNOWN" value for Duration are converted to NaN value.</td>
+    </tr>
+    <tr>
+        <td>Rating</td>
+        <td>The age rating of the anime.</td>
+        <td>Converted the Categorical Data Field - "Rating" from Text Representation to Numerical Representation, Represented under "Rating Code"<br><br>
+            0	G - All Ages<br>
+            1	PG - Children<br>
+            2	PG-13 - Teens 13 or older<br>
+            3	R - 17+ (violence & profanity)<br>
+            4	R+ - Mild Nudity<br>
+            5	Rx - Hentai<br>
+            6	Unknown (Removed)</td>
+        <td>✔</td>
+        <td>669 UNKNOWN values retained</td>
+    </tr>
+    <tr>
+        <td>Rank</td>
+        <td>The rank of the anime based on popularity or other criteria.</td>
+        <td>UNKNOWN values are filled with Median Rank Values. Titles with Rank 0 are appended to the end of the ranking in running order.</td>
+        <td>✔</td>
+        <td>1797/15206 Unknowns, 80 Rank 0 (Invalid). </td>
+    </tr>
+    <tr>
+        <td>Popularity</td>
+        <td>The popularity rank of the anime.</td>
+        <td>Titles with Rank 0 are appended to the end of the ranking in running order</td>
+        <td>✔</td>
+        <td>80 values with "UNKNOWN" </td>
+    </tr>
+    <tr>
+        <td>Favorites</td>
+        <td>The number of times the anime was marked as a favorite by users.</td>
+        <td>No cleaning required. Left as it is.</td>
+        <td>✔</td>
+        <td>0 Favorites means there are nobody who added the title as favorites.</td>
+    </tr>
+    <tr>
+        <td>Scored By</td>
+        <td>The number of users who scored the anime.</td>
+        <td>Converted to Int. Replaced 5512 rows with Unknowns using values computed from MICE, for both Score and Scored By, using other columns with numerical data that possess high correlation with Score and Scored By, like Members, Favourites and Popularity.</td>
+        <td>✔</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Members</td>
+        <td>The number of members who have added the anime to their list on the platform.</td>
+        <td>No cleaning required. Left as it is.</td>
+        <td>✔</td>
+        <td>0 members means there are no members who added the anime to their list.</td>
+    </tr>
+    <tr>
+        <td>Image URL</td>
+        <td>The URL of the anime's image or poster.</td>
+        <td>No cleaning required. Left as it is.</td>
+        <td>✔</td>
+        <td>Kept in case we want to use Machine Learning to see how the poster style may affect the popularity, and other things we want to find out.</td>
+    </tr>
+</table>
+<hr>
 ### Challenges Addressed
 1. **Irrelevant Data**
     - Dropped Other Name, Licensors due to irrelevance or excessive unknown values
