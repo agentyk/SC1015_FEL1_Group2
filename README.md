@@ -57,13 +57,17 @@ The cleaned dataset includes:
 #### Models Implemented
 1. Random Forest Regressor
    - Predicted Score Using Duration & Episodes
+   - Suitable for these non-linear relationships
    - Evaluated with Mean Squared Error (MSE) and R-squared
 2. Decision Tree Classifier
    - Classified anime scores and visualized feature importance.
 3. XGBoost Regressor
    - Leveraged categorical features for robust predictions
+   - Used numeric and categorical values to determine if feature has significant impact on the score
 4. CatBoost Classifier
    - Utilized GPU accelerations for genre-based score predictions.
+   - Evaluated with Classification Accuracy, Classification Report,
+   - Mean Squared Error (MSE), Mean Absolute Error (MAE) and R-squared
 
 ### Visualizations
 - Boxplots & scatterplots for score distributions
